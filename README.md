@@ -2,7 +2,7 @@
 
 ## Requirements
 
--IntelliJ IDEA or Android Studio
+- IntelliJ IDEA or Android Studio
 
 ## Getting Started
 - Create an empty Android project
@@ -46,6 +46,7 @@ You’ll notice a white gap is left between ‘Enter todo’ and ‘Add todo’.
 12. Set the bottom constraint of the <code>RecyclerView</code> to one of the other components, it doesn’t matter which one. You’ll notice that it gets totally centered. It has something to do with the height. Let’s see if you can figure it out.
     
 Okay, now let’s set up how each individual item will look like when one is added to the list.
+
 13. On the <code>layout</code> folder, create a new <code>Layout Resource File</code>.
 
 14. Give it a name like ‘item_todo’ and OK. A new screen like the one before will appear.
@@ -122,6 +123,7 @@ if (isChecked) {
   ```
 
 Let’s work now on the <code>onBindViewHolder</code> function. This will be called when a new item in our list is visible. 
+
 17. Place this code inside it: 
     
 ```
@@ -139,7 +141,7 @@ Let’s work now on the <code>onBindViewHolder</code> function. This will be cal
 
 18. The last function is an easy one. This one should return the amount of items we have in our list.
 
-19. You need to add a couple more though. One for adding a todo and one for deleting all done todos. So go ahead and add a function that you can call addTodo, passing in todo. Here you need to add that todo to all todos. You can use a method for that. Then we need to notify that we inserted an item. Take a look here:
+19. You need to add a couple more though. One for adding a todo and one for deleting all done todos. So go ahead and add a function that you can call addTodo, passing in <code>todo</code>. Here you need to add that todo to all todos. You can use a method for that. Then we need to notify that we inserted an item. Take a look here:
     https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/RecyclerView.Adapter#notifyiteminserted. 
 20. The next one should delete all done todos. For the <code>deleteDoneTodos</code> function you can use this code:
 
@@ -154,9 +156,9 @@ Okay, stay with me, we are almost done.
 
 21. Go to <code>MainActivity</code> and let’s define the behavior of your app.
     
-22. Define a global private <code>lateinit</code> variable called todoAdapter.
+22. Define a global private <code>lateinit</code> variable called <code>todoAdapter</code>.
     
-23. We’ll initialize it inside the onCreate function by adding this code inside the <code>onCreate</code> function:
+23. We’ll initialize it inside the <code>onCreate</code> function by adding this code inside the <code>onCreate</code> function:
 ```
 todoAdapter = TodoAdapter(mutableListOf())
 
