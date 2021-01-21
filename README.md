@@ -53,6 +53,7 @@ Okay, now let’s set up how each individual item will look like when one is add
 15. Add a <code>TextView</code> tag to the code with properties “@+id/tvTodoTitle”, “0dp”, “wrap_content”, add “Example” as text and set the constraint to left, top and bottom.
 
 Notice that the component gets centered to the middle of the screen. You need to set up the <code>ConstraintLayout</code> height to something like “80dp”. Set it however you like, you’ll see the result immediately.
+
 16. Now you want to add a checkbox next to the example. Can you figure out how to? Don’t forget to give it an ID and set the constraints right for both components.
 
 17. See if you can change the text size of the text view and make it a little bigger, to 24sp or so.
@@ -103,6 +104,7 @@ Alright, now is when it gets real spicy.
 This function will create the <code>TodoViewHolder</code> and the code just describes how the view should look like. 
 
 Now you need to create the function that will strike the text through when an item is checked.
+
 14. Create a private function under <code>onCreateViewHolder</code>.
 
 15. As parameters pass in the ID we gave it previously, <code>tvTodoTitle: Textview</code> and the boolean <code>isChecked</code>, we created before.
@@ -151,7 +153,9 @@ notifyDataSetChanged()
 Okay, stay with me, we are almost done.
 
 21. Go to <code>MainActivity</code> and let’s define the behavior of your app.
+    
 22. Define a global private <code>lateinit</code> variable called todoAdapter.
+    
 23. We’ll initialize it inside the onCreate function by adding this code inside the <code>onCreate</code> function:
 ```
 todoAdapter = TodoAdapter(mutableListOf())
